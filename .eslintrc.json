@@ -1,3 +1,43 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "airbnb", 
+    "airbnb-typescript",
+    "airbnb/hooks", 
+    "next/core-web-vitals"
+  ],
+  "plugins": [
+    "better-styled-components"
+  ],
+  "rules": {
+    "better-styled-components/sort-declarations-alphabetically": 2,
+    "indent": [
+      "error",
+      4,
+      {
+        "ignoredNodes": [
+          "TemplateLiteral"
+        ],
+        "SwitchCase": 1
+      }
+    ],
+    "@typescript-eslint/indent": [
+      "error", 4, {
+        "ignoredNodes": [
+          "TemplateLiteral"
+        ],
+        "SwitchCase": 1
+      }
+    ],
+    "no-tabs": 0,
+    "react/jsx-indent": ["error", 4],
+    "react/jsx-indent-props": ["error", 4],
+    "react/function-component-definition": "off",
+    "import/prefer-default-export": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/require-default-props": "off"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": ["tsconfig.json"]
+  }
 }
