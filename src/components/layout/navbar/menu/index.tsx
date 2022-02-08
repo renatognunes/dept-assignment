@@ -49,7 +49,7 @@ const Menu = ({ closeMenu }: MenuProps) => {
             <MenuContentStyled>
                 <MenuListStyled>
                     {Object.values(MenuLinks).map((link) => (
-                        <Link key={link} href={`/${link}`} passHref>
+                        <Link key={link} href={`/${link === 'home' ? '' : link}`} passHref>
                             <MenuItemStyled onClick={closeMenu}>
                                 <IconArrow />
                                 {link}
@@ -71,9 +71,17 @@ const Menu = ({ closeMenu }: MenuProps) => {
                 </MenuLocationsWrapperStyled>
                 <MenuSocialWrapperStyled>
                     {Object.values(MenuSocials).map((social) => (
-                        <MenuSocialStyled key={social}>
-                            {social}
-                        </MenuSocialStyled>
+                        <a
+                            key={social}
+                            aria-label={social}
+                            href={`https://${social}.com`}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <MenuSocialStyled>
+                                {social}
+                            </MenuSocialStyled>
+                        </a>
                     ))}
                 </MenuSocialWrapperStyled>
             </MenuContentStyled>

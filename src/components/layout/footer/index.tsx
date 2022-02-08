@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 import IconDept from '@public/assets/icons/icon-dept.svg';
 import IconFb from '@public/assets/icons/icon-fb.svg';
@@ -6,7 +7,6 @@ import IconInstagram from '@public/assets/icons/icon-instagram.svg';
 import IconTwitter from '@public/assets/icons/icon-twitter.svg';
 import IconScroll from '@public/assets/icons/icon-scroll-to-top.svg';
 
-import Link from 'next/link';
 import {
     FooterContainerStyled,
     FooterLeftStyled,

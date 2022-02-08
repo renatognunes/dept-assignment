@@ -19,6 +19,7 @@ const Header = () => (
             objectFit="cover"
             priority
             placeholder="blur"
+            quality={100}
         />
         <HeadingTextStyled>
             Work

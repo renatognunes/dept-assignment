@@ -34,6 +34,7 @@ const Card = ({ item }: CardProps) => {
                         height={500}
                         width={isSquare ? 585 : 800}
                         objectFit="cover"
+                        quality={100}
                     />
                 </CardImageStyled>
             )}
