@@ -11,7 +11,9 @@ npm run dev
 ```
 
 Additional scripts:
+
 `npm run format` - Format application using eslint configuration.
+
 `npm run test` - run unit-tests for common components. 
 
 ___
