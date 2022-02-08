@@ -30,7 +30,7 @@ export const CardContainerStyled = styled.div<CardContainerStyledProps>`
 	
 	${({ $variant }) => $variant === CardTypes.Small && css`
 		border-bottom: 1px solid #dddddd;
-		margin-bottom: 26px;
+		margin-bottom: 0px;
 		padding: 0px 0px 20px 0px;
 
 		&:first-child {
@@ -86,13 +86,9 @@ export const CardDescriptionStyled = styled.div<CardDescriptionStyledProps>`
 		padding-bottom: 0px;
 		
 		${({ $variant }) => $variant === CardTypes.Small && css`
-		line-height: 32px;
-		padding-bottom: 30px;
+			line-height: 32px;
+			padding-bottom: 30px;
 		`};	
-	}
-	
-	@media(max-width: ${MobilePortraitMaxWidthPx}) {
-		max-width: 300px;
 	}
 `;
 
@@ -105,6 +101,7 @@ export const CardLinkStyled = styled.div`
 	font-size: 14px;
 	font-weight: bold;
 	line-height: 30px;
+	margin-bottom: 8px;
 	text-transform: uppercase;
 
 	span {

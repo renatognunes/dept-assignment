@@ -11,8 +11,8 @@ import {
 } from './styles';
 
 type Filter = {
-    category: string,
-    industry: string
+    category: DropdownCategories,
+    industry: DropdownIndustries
 };
 
 interface DropdownProps {
@@ -36,14 +36,16 @@ const Dropdown = ({ filter, setFilter }: DropdownProps) => {
                     ref={categoriesEl}
                     onChange={filterByCategory}
                 >
-                    <DropdownOptionTextStyled value="all">
+                    <DropdownOptionTextStyled value={DropdownCategories.All}>
                         all work
                     </DropdownOptionTextStyled>
-                    {Object.values(DropdownCategories).map((item) => (
-                        <DropdownOptionTextStyled key={item} value={item}>
-                            {item}
-                        </DropdownOptionTextStyled>
-                    ))}
+                    {Object.values(DropdownCategories)
+                        .slice(1, 5)
+                        .map((item) => (
+                            <DropdownOptionTextStyled key={item} value={item}>
+                                {item}
+                            </DropdownOptionTextStyled>
+                        ))}
                 </DropdownOptionStyled>
             </DropdownItemStyled>
             <DropdownItemStyled>
@@ -55,14 +57,16 @@ const Dropdown = ({ filter, setFilter }: DropdownProps) => {
                     ref={industriesEl}
                     onChange={filterByIndustry}
                 >
-                    <DropdownOptionTextStyled value="all">
+                    <DropdownOptionTextStyled value={DropdownCategories.All}>
                         all industries
                     </DropdownOptionTextStyled>
-                    {Object.values(DropdownIndustries).map((item) => (
-                        <DropdownOptionTextStyled key={item} value={item}>
-                            {item}
-                        </DropdownOptionTextStyled>
-                    ))}
+                    {Object.values(DropdownIndustries)
+                        .slice(1, 5)
+                        .map((item) => (
+                            <DropdownOptionTextStyled key={item} value={item}>
+                                {item}
+                            </DropdownOptionTextStyled>
+                        ))}
                 </DropdownOptionStyled>
             </DropdownItemStyled>
         </DropdownContainerStyled>
@@ -76,7 +80,7 @@ Dropdown.useComponent = ({ filter, setFilter }: DropdownProps) => {
     const filterByCategory = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setFilter({
             ...filter,
-            category: e.target.value,
+            category: e.target.value as DropdownCategories,
         });
 
         categoriesEl.current?.blur();
@@ -85,7 +89,7 @@ Dropdown.useComponent = ({ filter, setFilter }: DropdownProps) => {
     const filterByIndustry = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setFilter({
             ...filter,
-            industry: e.currentTarget.value,
+            industry: e.currentTarget.value as DropdownIndustries,
         });
 
         industriesEl.current?.blur();

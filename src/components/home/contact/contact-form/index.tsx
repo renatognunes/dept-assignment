@@ -1,6 +1,5 @@
 import React from 'react';
-import Button from '@components/common/button';
-import InputField from '@components/common/input-field';
+import { Button, InputField } from '@components/common';
 
 import { Form, Field } from 'react-final-form';
 

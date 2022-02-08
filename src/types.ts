@@ -1,4 +1,4 @@
-import { CardTypes } from '@components/enums';
+import { CardTypes, DropdownCategories, DropdownIndustries } from '@components/enums';
 
 export interface PartnersType {
     name: string;
@@ -11,4 +11,6 @@ export interface ContentType {
     title: string;
     desc: string;
     image: string | null;
+    category: DropdownCategories;
+    industry: DropdownIndustries;
 }

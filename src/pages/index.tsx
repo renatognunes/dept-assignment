@@ -4,14 +4,14 @@ import Head from 'next/head';
 import { HomePage } from '@components/index';
 
 const Home: NextPage = () => (
-    <div>
+    <>
         <Head>
-            <title>Dept Agency</title>
-            <meta name="Dept Agency" />
+            <meta name="description" content="Landing page of Dept Agency assignment test" key="Assignment" />
             <link rel="icon" href="/favicon.ico" />
+            <title>Dept Agency</title>
         </Head>
         <HomePage />
-    </div>
+    </>
 );
 
 export default Home;

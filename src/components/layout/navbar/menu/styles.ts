@@ -37,7 +37,7 @@ export const CloseButtonStyled = styled.button`
 	color: #fff;
 	cursor: pointer;
 	font-size: 22px;
-	font-weight: 300;
+	font-weight: 400;
 `;
 
 export const MenuContentStyled = styled.div`
@@ -66,7 +66,7 @@ export const MenuListStyled = styled.div`
 `;
 
 export const MenuListShadeStyled = styled.div`
-	background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,1));
+	background-image: linear-gradient(rgba(14, 14, 14,0), rgba(14, 14, 14,1), rgba(14, 14, 14,1));
 	bottom: 0;
 	height: 90px;
 	pointer-events: none;

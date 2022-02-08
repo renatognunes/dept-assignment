@@ -50,7 +50,7 @@ const Menu = ({ closeMenu }: MenuProps) => {
                 <MenuListStyled>
                     {Object.values(MenuLinks).map((link) => (
                         <Link key={link} href={`/${link}`} passHref>
-                            <MenuItemStyled>
+                            <MenuItemStyled onClick={closeMenu}>
                                 <IconArrow />
                                 {link}
                             </MenuItemStyled>

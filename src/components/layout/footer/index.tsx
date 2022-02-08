@@ -72,17 +72,17 @@ function Footer() {
                         </Link>
                     </FooterLinksStyled>
                     <FooterSocialLinksStyled>
-                        <a href="https://facebook.com" target="_blank" rel="noreferrer">
+                        <a aria-label="Facebook" href="https://facebook.com" target="_blank" rel="noreferrer">
                             <FooterSocialStyled>
                                 <IconFb />
                             </FooterSocialStyled>
                         </a>
-                        <a href="https://twitter.com" target="_blank" rel="noreferrer">
+                        <a aria-label="Twitter" href="https://twitter.com" target="_blank" rel="noreferrer">
                             <FooterSocialStyled>
                                 <IconTwitter />
                             </FooterSocialStyled>
                         </a>
-                        <a href="https://instagram.com" target="_blank" rel="noreferrer">
+                        <a aria-label="Instagram" href="https://instagram.com" target="_blank" rel="noreferrer">
                             <FooterSocialStyled>
                                 <IconInstagram />
                             </FooterSocialStyled>

@@ -6,7 +6,7 @@ import { ContentType } from 'src/types';
 import { CardTypes } from '@components/enums';
 import IconDropdown from '@public/assets/icons/icon-dropdown.svg';
 
-import { useScreenSize } from 'src/hooks';
+import { useScreenSize } from '@components/hooks';
 import { MobilePortraitMaxWidth } from '@styles/variables';
 import {
     CardContainerStyled,
@@ -22,10 +22,6 @@ interface CardProps {
 
 const Card = ({ item }: CardProps) => {
     const { isSquare } = Card.useComponent({ item });
-
-    if (!item) {
-        return (<>Loading...</>);
-    }
 
     return (
         <CardContainerStyled $variant={item.size}>

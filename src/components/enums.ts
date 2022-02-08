@@ -34,12 +34,14 @@ export enum MenuSocials {
 }
 
 export enum DropdownCategories {
+    All = 'all',
     Design = 'design',
     Software = 'software',
     Branding = 'branding',
 }
 
 export enum DropdownIndustries {
+    All = 'all',
     Art = 'art & culture',
     Food = 'food & goods',
     Tech = 'technology',

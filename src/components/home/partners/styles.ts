@@ -66,7 +66,7 @@ export const PartnerLogoStyled = styled.div`
 
 	img {
 		height: auto; 
-		width:100%;
+		width: auto;
 	}
 	
 	@media (max-width: ${MobileLandscapeMaxWidthPx}) {

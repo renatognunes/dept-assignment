@@ -1,14 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable max-len */
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useMemo } from 'react';
 
 import { ENDPOINT_PARTNERS } from 'src/config';
 
 import { PartnersType } from 'src/types';
-import { useScreenSize } from 'src/hooks';
+import { useScreenSize, useFetch, FetchActions } from '@components/hooks';
 import { MobileLandscapeMaxWidth } from '@styles/variables';
 
-import Image from 'next/image';
+import { Loading } from '@components/common';
 import {
     PartnersContainerStyled,
     PartnersTitleTextStyled,
@@ -18,7 +18,13 @@ import {
 } from './styles';
 
 const Partners = () => {
-    const { partners } = Partners.useComponent();
+    const { partners, status } = Partners.useComponent();
+
+    if (status !== FetchActions.FETCHED) {
+        return (
+            <Loading />
+        );
+    }
 
     return (
         <PartnersContainerStyled>
@@ -36,7 +42,7 @@ const Partners = () => {
                         <img
                             alt={partner.name}
                             src={`/assets/logos/${partner.image}`}
-                            width={100}
+                            width={120}
                             height={100}
                         />
                     </PartnerLogoStyled>
@@ -47,34 +53,20 @@ const Partners = () => {
 };
 
 Partners.useComponent = () => {
-    const [partners, setPartners] = useState<PartnersType[]>([]);
+    const { data, status } = useFetch(ENDPOINT_PARTNERS);
     const screenSize = useScreenSize();
 
-    useEffect(() => {
-        const getPartners = async () => {
-            try {
-                const response = await fetch(ENDPOINT_PARTNERS);
-
-                setPartners(await response.json());
-            } catch (error) {
-                // eslint-disable-next-line no-console
-                console.error('Something went wrong', error);
-            }
-        };
-
-        getPartners();
-    }, []);
-
-    const filteredPartners = useMemo(() => {
+    const partners = useMemo(() => {
         if (screenSize.width > 0 && screenSize.width < MobileLandscapeMaxWidth) {
-            return partners.slice(0, 6);
+            return data.slice(0, 6) as PartnersType[];
         }
 
-        return partners;
-    }, [screenSize, partners]);
+        return data as PartnersType[];
+    }, [screenSize, data]);
 
     return {
-        partners: filteredPartners,
+        partners,
+        status,
     };
 };
 

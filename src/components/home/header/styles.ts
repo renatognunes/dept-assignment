@@ -6,6 +6,12 @@ export const HeaderContainerStyled = styled.div`
     display: block;
     position: relative;
     width: 100%;
+
+    @media (max-width: ${MobileLandscapeMaxWidthPx}) {
+        & > span:first-of-type {
+            aspect-ratio: 1.18;
+        }
+    }
 `;
 
 export const HeadingTextStyled = styled.h3`

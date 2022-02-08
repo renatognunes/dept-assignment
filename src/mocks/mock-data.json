@@ -4,7 +4,7 @@
 		"size": "medium",
 		"title": "BOL.COM",
 		"desc": "A summer island in the Netherlands",
-		"image-url": "bolcom.png",
+		"image": "bolcom.png",
 		"category": "design",
 		"industry": "art & culture"
 	},
@@ -13,7 +13,7 @@
 		"size": "medium",
 		"title": "KEMPEN",
 		"desc": "Not some average banking website",
-		"image-url": "kempen.png",		
+		"image": "kempen.png",		
 		"category": "software",
 		"industry": "technology"
 	},
@@ -22,7 +22,7 @@
 		"size": "medium",
 		"title": "PHILIPS",
 		"desc": "Beautiful design meets innovative technology",
-		"image-url": "philips.png",
+		"image": "philips.png",
 		"category": "branding",
 		"industry": "art & culture"
 	},
@@ -31,7 +31,7 @@
 		"size": "medium",
 		"title": "Gemeentemuseum",
 		"desc": "A 100 years of Mondriaan & De Stijl",
-		"image-url": "gemeentemuseum.png",
+		"image": "gemeentemuseum.png",
 		"category": "design",
 		"industry": "art & culture"
 	},
@@ -40,7 +40,7 @@
 		"size": "large",
 		"title": "Florensis",
 		"desc": "Rethinking the entire online ecosystem",
-		"image-url": "florensis.png",
+		"image": "florensis.png",
 		"category": "software",
 		"industry": "technology"
 	},
@@ -49,7 +49,7 @@
 		"size": "small",
 		"title": "MICROSOFT",
 		"desc": "Tapping into Ireland’s unique gaming culture and bringing a fresh flavour to their Xbox social media channels",
-		"image-url": null,
+		"image": null,
 		"category": "branding",
 		"industry": "technology"
 	},
@@ -58,7 +58,7 @@
 		"size": "small",
 		"title": "O’NEILL",
 		"desc": "Integrating existing content into O’Neill’s new e-commerce platform",
-		"image-url": null,
+		"image": null,
 		"category": "software",
 		"industry": "art & culture"
 	},
@@ -67,7 +67,7 @@
 		"size": "medium",
 		"title": "Be Lighting",
 		"desc": "Delivering clarity on a global scale",
-		"image-url": "lightning.png",
+		"image": "lightning.png",
 		"category": "design",
 		"industry": "art & culture"
 	},
@@ -76,43 +76,43 @@
 		"size": "medium",
 		"title": "TUI",
 		"desc": "Swipe to find your next holiday destination",
-		"image-url": "tui.png",
+		"image": "tui.png",
 		"category": "design",
 		"industry": "art & culture"
 	},
 	{
 		"id": 10,
-		"size": "small",
-		"title": "BUTLINS",
-		"desc": "Enhancing customer experience for personalised holiday planning using real time data",
-		"image-url": null,
+		"size": "large",
+		"title": "Florensis",
+		"desc": "Rethinking the entire online ecosystem",
+		"image": "florensis.png",
 		"category": "software",
-		"industry": "art & culture"
+		"industry": "technology"
 	},
 	{
 		"id": 11,
 		"size": "small",
-		"title": "VACANSESELECT",
-		"desc": "Predicting booking behavior for holidays with smart data, voice search and machine learning",
-		"image-url": null,
+		"title": "BUTLINS",
+		"desc": "Enhancing customer experience for personalised holiday planning using real time data",
+		"image": null,
 		"category": "software",
 		"industry": "art & culture"
 	},
 	{
 		"id": 12,
-		"size": "large",
-		"title": "Florensis",
-		"desc": "Rethinking the entire online ecosystem",
-		"image-url": "florensis.png",
+		"size": "small",
+		"title": "VACANSESELECT",
+		"desc": "Predicting booking behavior for holidays with smart data, voice search and machine learning",
+		"image": null,
 		"category": "software",
-		"industry": "technology"
+		"industry": "art & culture"
 	},
 	{
 		"id": 13,
 		"size": "medium",
 		"title": "CHOCOMEL",
 		"desc": "A campaign for the limited edition letter packs",
-		"image-url": "chocomel.png",
+		"image": "chocomel.png",
 		"category": "design",
 		"industry": "food & goods"
 	},
@@ -121,7 +121,7 @@
 		"size": "medium",
 		"title": "JBL",
 		"desc": "Live like a champion with Jerome Booteng",
-		"image-url": "jbl.png",
+		"image": "jbl.png",
 		"category": "branding",
 		"industry": "technology"
 	},
@@ -130,7 +130,7 @@
 		"size": "medium",
 		"title": "zalando",
 		"desc": "Innovative SEO and content strategy for Zalando",
-		"image-url": "zalando.png",
+		"image": "zalando.png",
 		"category": "branding",
 		"industry": "technology"
 	},
@@ -139,7 +139,7 @@
 		"size": "medium",
 		"title": "Koninklijke Bibliotheek",
 		"desc": "The search for the most influential book ever",
-		"image-url": "koninklijke-bibliotheek.png",
+		"image": "koninklijke-bibliotheek.png",
 		"category": "design",
 		"industry": "art & culture"
 	},
@@ -148,7 +148,7 @@
 		"size": "medium",
 		"title": "Liberty Global",
 		"desc": "Delivering complex commerce solutions",
-		"image-url": "liberty-global.png",
+		"image": "liberty-global.png",
 		"category": "software",
 		"industry": "technology"
 	},
@@ -157,7 +157,7 @@
 		"size": "medium",
 		"title": "Arla",
 		"desc": "Swipe to find your next holiday destination",
-		"image-url": "arla.png",
+		"image": "arla.png",
 		"category": "design",
 		"industry": "food & goods"
 	}

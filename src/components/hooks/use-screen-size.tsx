@@ -20,6 +20,8 @@ const useScreenSize = () => {
             }, 200);
         };
 
+        resizeListener();
+
         window.addEventListener('resize', resizeListener);
 
         return () => {

@@ -1,4 +1,5 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 
 import IconDept from '@public/assets/icons/icon-dept.svg';
 import IconMenu from '@public/assets/icons/icon-menu.svg';
@@ -13,7 +14,8 @@ import {
     MenuWrapperStyled,
     MenuButtonStyled,
 } from './styles';
-import Menu from './menu';
+
+const Menu = dynamic(() => import('./menu'));
 
 function Navbar() {
     const [menu, toggleMenu] = React.useState(false);
@@ -33,6 +35,7 @@ function Navbar() {
                             Menu
                         </MenuTextStyled>
                         <MenuButtonStyled
+                            aria-label="Toggle menu"
                             onClick={() => toggleMenu(!menu)}
                             tabIndex={0}
                             type="button"
