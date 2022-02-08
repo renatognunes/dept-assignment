@@ -50,6 +50,7 @@ export const GridCasesWrapperStyled = styled.div<GridCasesWrapperStyledProps>`
 
 			&:last-child {
 				border-bottom: none;
+				margin-bottom: 0px;
 			}
 		}
 	`}

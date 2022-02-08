@@ -38,6 +38,14 @@ export const CardContainerStyled = styled.div<CardContainerStyledProps>`
 		} 
 	`};
 
+	@media(max-width: ${DesktopMaxWidthPx}) {
+		&:last-child {
+			${({ $variant }) => $variant === CardTypes.Small && css`
+				margin-bottom: 14px;
+			`};		
+		}
+	}
+
 	@media (max-width: ${MobilePortraitMaxWidthPx}) {
 		width: 100%;
 		padding: 0px;
