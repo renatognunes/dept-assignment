@@ -156,8 +156,8 @@ export const FooterTextWrapperStyled = styled.div`
 		flex-direction: column;
 
 		${FooterTextStyled} {
-		margin: 0px;
-	}
+			margin: 0px;
+		}
 	}
 `;
 

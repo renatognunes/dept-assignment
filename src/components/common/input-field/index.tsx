@@ -10,17 +10,17 @@ interface InputFieldProps {
 }
 
 const InputField = ({
-    label, error, ...props
+    label, id, error, ...props
 }: InputFieldProps) => {
-    const { InputComponent } = InputField.useComponent(props);
+    const { InputComponent } = InputField.useComponent({ id, ...props });
 
     return (
         <InputFieldStyled>
-            <label htmlFor={label}>
+            <label htmlFor={id}>
                 {label}
                 {InputComponent}
             </label>
-            {error && <span>{error}</span>}
+            {error && <span data-testid="error-message">{error}</span>}
         </InputFieldStyled>
     );
 };

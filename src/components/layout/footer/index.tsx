@@ -23,14 +23,8 @@ import {
     ButtonScrollToTopStyled,
 } from './styles';
 
-function Footer() {
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: 'smooth',
-        });
-    };
+const Footer = () => {
+    const { scrollToTop } = Footer.useComponent();
 
     return (
         <FooterContainerStyled>
@@ -114,6 +108,20 @@ function Footer() {
             </FooterRightStyled>
         </FooterContainerStyled>
     );
-}
+};
+
+Footer.useComponent = () => {
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth',
+        });
+    };
+
+    return {
+        scrollToTop,
+    };
+};
 
 export default Footer;
