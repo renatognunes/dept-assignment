@@ -53,9 +53,10 @@ export const DropdownOptionStyled = styled.select`
   	border-bottom: 1px solid black;
 	border-radius: 0px;
     box-sizing:border-box;
-    display: flex;
-    font-family: ${TekoFontFamily}; 
-    font-size: 30px;
+    color: #0e0e0e;
+    display: flex; 
+    font-family: ${TekoFontFamily};
+	font-size: 30px;
 	line-height: 30px;
 	padding-right: 1rem !important;
 	padding-top: 1px;
