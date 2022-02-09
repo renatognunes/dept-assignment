@@ -37,7 +37,7 @@ export default class MyDocument extends Document {
                         href="https://fonts.gstatic.com"
                         crossOrigin="anonymous"
                     />
-                    <link data-ref="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;700&display=swap" rel="stylesheet" />
+                    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;700&display=swap" rel="stylesheet" />
                 </Head>
                 <body>
                     <Main />
