@@ -1,2 +1,2 @@
-export const ENDPOINT_PARTNERS = 'https://json.extendsclass.com/bin/ebaa1a106c87';
-export const ENDPOINT_CONTENT = 'https://json.extendsclass.com/bin/2c791ff2543a';
+export const ENDPOINT_PARTNERS = 'https://www.npoint.io/docs/44d6cf784f879462040d';
+export const ENDPOINT_CONTENT = 'https://api.npoint.io/8df692f8c9dc9f8a95ff';
