@@ -25,3 +25,5 @@ ___
 - Styled Components - https://styled-components.com/
 - Jest - https://jestjs.io/
 ---
+
+*quick update: There has been an issue with the previous endpoint for the mocked JSON data. It is fixed now.*
