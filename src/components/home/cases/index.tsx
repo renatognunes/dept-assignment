@@ -22,7 +22,7 @@ import {
     TextStyled,
 } from './styles';
 
-const Cases = ({ cases }) => {
+const Cases = ({ cases }: any) => {
     const {
         list, hasFilter, filter, setFilter,
     } = Cases.useComponent({ cases });

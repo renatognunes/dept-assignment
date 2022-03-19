@@ -52,7 +52,7 @@ const Partners = ({ partnersList }) => {
     );
 };
 
-Partners.useComponent = ({ partnersList }) => {
+Partners.useComponent = ({ partnersList }: any) => {
     // const { data, status } = useFetch(ENDPOINT_PARTNERS);
     const screenSize = useScreenSize();
 
