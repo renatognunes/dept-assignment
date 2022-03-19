@@ -109,7 +109,7 @@ const Cases = ({ cases }: any) => {
     );
 };
 
-Cases.useComponent = ({ cases }) => {
+Cases.useComponent = ({ cases }: any) => {
     // const { data, status } = useFetch(ENDPOINT_CONTENT);
     const [filter, setFilter] = useState({
         category: DropdownCategories.All,

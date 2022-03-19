@@ -17,7 +17,7 @@ import {
     PartnerLogoStyled,
 } from './styles';
 
-const Partners = ({ partnersList }) => {
+const Partners = ({ partnersList }: any) => {
     const { partners } = Partners.useComponent({ partnersList });
 
     // if (status !== FetchActions.FETCHED) {
