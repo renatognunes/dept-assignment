@@ -2,13 +2,9 @@
 /* eslint-disable max-len */
 import React, { useState, useMemo } from 'react';
 
-import { ENDPOINT_CONTENT } from 'src/config';
 import { ContentType } from 'src/types';
 
-import { Loading } from '@components/common';
-
 import { CardTypes, DropdownCategories, DropdownIndustries } from '@components/enums';
-import { useFetch, FetchActions } from '@components/hooks';
 import Dropdown from '../dropdown';
 import Card from './case-card';
 import Quote from './quote';

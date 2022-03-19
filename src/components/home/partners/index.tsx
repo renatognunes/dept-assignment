@@ -2,13 +2,10 @@
 /* eslint-disable max-len */
 import React, { useMemo } from 'react';
 
-import { ENDPOINT_PARTNERS } from 'src/config';
-
 import { PartnersType } from 'src/types';
-import { useScreenSize, useFetch, FetchActions } from '@components/hooks';
+import { useScreenSize } from '@components/hooks';
 import { MobileLandscapeMaxWidth } from '@styles/variables';
 
-import { Loading } from '@components/common';
 import {
     PartnersContainerStyled,
     PartnersTitleTextStyled,
