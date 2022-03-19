@@ -17,14 +17,14 @@ import {
     PartnerLogoStyled,
 } from './styles';
 
-const Partners = () => {
-    const { partners, status } = Partners.useComponent();
+const Partners = ({ partnersList }) => {
+    const { partners } = Partners.useComponent({ partnersList });
 
-    if (status !== FetchActions.FETCHED) {
-        return (
-            <Loading />
-        );
-    }
+    // if (status !== FetchActions.FETCHED) {
+    //     return (
+    //         <Loading />
+    //     );
+    // }
 
     return (
         <PartnersContainerStyled>
@@ -52,21 +52,20 @@ const Partners = () => {
     );
 };
 
-Partners.useComponent = () => {
-    const { data, status } = useFetch(ENDPOINT_PARTNERS);
+Partners.useComponent = ({ partnersList }) => {
+    // const { data, status } = useFetch(ENDPOINT_PARTNERS);
     const screenSize = useScreenSize();
 
     const partners = useMemo(() => {
         if (screenSize.width > 0 && screenSize.width < MobileLandscapeMaxWidth) {
-            return data.slice(0, 6) as PartnersType[];
+            return partnersList.slice(0, 6) as PartnersType[];
         }
 
-        return data as PartnersType[];
-    }, [screenSize, data]);
+        return partnersList as PartnersType[];
+    }, [screenSize, partnersList]);
 
     return {
         partners,
-        status,
     };
 };
 

@@ -22,16 +22,16 @@ import {
     TextStyled,
 } from './styles';
 
-const Cases = () => {
+const Cases = ({ cases }) => {
     const {
-        list, hasFilter, filter, setFilter, status,
-    } = Cases.useComponent();
+        list, hasFilter, filter, setFilter,
+    } = Cases.useComponent({ cases });
 
-    if (status !== FetchActions.FETCHED) {
-        return (
-            <Loading />
-        );
-    }
+    // if (status !== FetchActions.FETCHED) {
+    //     return (
+    //         <Loading />
+    //     );
+    // }
 
     return (
         <MainContentStyled>
@@ -109,8 +109,8 @@ const Cases = () => {
     );
 };
 
-Cases.useComponent = () => {
-    const { data, status } = useFetch(ENDPOINT_CONTENT);
+Cases.useComponent = ({ cases }) => {
+    // const { data, status } = useFetch(ENDPOINT_CONTENT);
     const [filter, setFilter] = useState({
         category: DropdownCategories.All,
         industry: DropdownIndustries.All,
@@ -119,23 +119,23 @@ Cases.useComponent = () => {
     const hasFilter = useMemo(() => filter.category !== DropdownCategories.All || filter.industry !== DropdownIndustries.All, [filter]);
 
     const list = useMemo(() => {
-        if (!hasFilter) { return data as ContentType[]; }
+        if (!hasFilter) { return cases as ContentType[]; }
 
-        return (data as ContentType[]).filter((item) => {
+        return (cases as ContentType[]).filter((item) => {
             return (filter.category === DropdownCategories.All || item.category === filter.category)
                  && (filter.industry === DropdownIndustries.All || item.industry === filter.industry);
         }).map((item) => ({
             ...item,
             size: item.size === CardTypes.Small ? CardTypes.Small : CardTypes.Medium,
         }));
-    }, [hasFilter, filter, data]);
+    }, [hasFilter, filter, cases]);
 
     return {
         list,
         hasFilter,
         filter,
         setFilter,
-        status,
+        // status,
     };
 };
 
