@@ -3,10 +3,12 @@ import Link from 'next/link';
 
 import { BoilerplateContentStyled, ReturnLInkStyled } from './styles';
 
-const Boilerplate = () => (
+const Boilerplate = ({ id }: any) => (
     <div>
         <BoilerplateContentStyled>
-            PAGE CONTENT
+            PAGE CONTENT -
+            {' '}
+            {id}
             <Link href="/" passHref>
                 <ReturnLInkStyled>
                     RETURN

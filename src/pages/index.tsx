@@ -20,7 +20,7 @@ export async function getStaticProps() {
     };
 }
 
-const Home: NextPage = ({ cases, partners }) => (
+const Home: NextPage = ({ cases, partners }: { cases: any, partners: any }) => (
     <>
         <Head>
             <meta name="description" content="Landing page of Dept Agency assignment test" key="Assignment" />

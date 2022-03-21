@@ -44,7 +44,7 @@ const Card = ({ item }: CardProps) => {
             <CardDescriptionStyled $variant={item.size}>
                 {item.desc}
             </CardDescriptionStyled>
-            <Link href={`/case_${item.id}`} passHref>
+            <Link href={`/${item.id}`} passHref>
                 <CardLinkStyled>
                     <IconDropdown />
                     <span>View Case</span>
