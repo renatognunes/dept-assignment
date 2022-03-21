@@ -7,13 +7,16 @@ export async function getStaticPaths() {
     const casesResponse = await fetch(ENDPOINT_CONTENT);
     const cases = await casesResponse.json();
 
-    return cases.map(
-        (item: any) => ({
-            params: {
-                id: item.id,
-            },
-        }),
-    );
+    return {
+        paths: cases.map(
+            (item: any) => ({
+                params: {
+                    id: item.id,
+                },
+            }),
+        ),
+        fallback: false,
+    };
 }
 
 export function getStaticProps({ params }: any) {
