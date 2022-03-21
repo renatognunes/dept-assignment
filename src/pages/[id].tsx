@@ -11,7 +11,7 @@ export async function getStaticPaths() {
         paths: cases.map(
             (item: any) => ({
                 params: {
-                    id: item.id,
+                    id: String(item.id),
                 },
             }),
         ),
