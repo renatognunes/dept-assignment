@@ -62,7 +62,7 @@ export const CardContainerStyled = styled.div<CardContainerStyledProps>`
 `;
 
 export const CardBrandTextStyled = styled.div`
-	color: #969696;
+	color: #7d7d7d;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 15px;
 	font-weight: bold;
