@@ -2,6 +2,7 @@ import { CardTypes } from '@components/enums';
 import {
     TekoFontFamily, MobileLandscapeMaxWidthPx, MobilePortraitMaxWidthPx, DesktopMaxWidthPx,
 } from '@styles/variables';
+
 import styled, { css } from 'styled-components';
 
 interface CardContainerStyledProps {
