@@ -37,7 +37,7 @@ export const DropdownItemStyled = styled.div`
 `;
 
 export const DropdownTextStyled = styled.div`
-	color: #575757;
+	color: #a3a3a3;
 	margin-right: 6px;
 	
 `;
